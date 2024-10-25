@@ -175,3 +175,18 @@ private fun MonthNumberTextPreview() {
         MonthNumberText()
     }
 }
+
+@Composable
+private fun MonthText() {
+    Text(
+        text = "ヶ月経過"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MonthTextPreview() {
+    LessonsCalendarTheme {
+        MonthText()
+    }
+}
