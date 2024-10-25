@@ -1,5 +1,6 @@
 package com.example.lessonscalendar
 
+import android.app.DatePickerDialog
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +9,13 @@ import android.view.ViewGroup
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 
 import com.example.lessonscalendar.ui.theme.LessonsCalendarTheme
@@ -94,6 +95,33 @@ private fun WhenToLearnText() {
 private fun WhenToLearnTextPreview() {
     LessonsCalendarTheme {
         WhenToLearnText()
+    }
+}
+
+@Composable
+private fun WhenToLearnPicker() {
+    val context = LocalContext.current
+    var selectedDate by remember { mutableStateOf("") }
+
+    Button(onClick = {
+        // 日付選択ダイアログを表示
+        DatePickerDialog(context, { _, year, month, day ->
+            selectedDate = "2024年10月25日"
+        }, 2024, 10, 25).show()
+    }) {
+        Text("日付を選択")
+    }
+
+    if (selectedDate.isNotEmpty()) {
+        Text(text = "選択された日付: $selectedDate")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WhenToLearnPickerPreview() {
+    LessonsCalendarTheme {
+        WhenToLearnPicker()
     }
 }
 
