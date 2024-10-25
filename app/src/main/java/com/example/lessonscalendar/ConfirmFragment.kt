@@ -54,3 +54,18 @@ fun WhatToLearnTextPreview() {
         WhatToLearnText()
     }
 }
+
+@Composable
+fun WhatToLearnUserEnteredText() {
+    Text(
+        text = "ピアノ"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun WhatToLearnUserEnteredTextPreview() {
+    LessonsCalendarTheme {
+        WhatToLearnUserEnteredText()
+    }
+}
