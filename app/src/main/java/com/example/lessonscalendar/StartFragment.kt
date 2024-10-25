@@ -6,16 +6,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 
 import com.example.lessonscalendar.ui.theme.LessonsCalendarTheme
@@ -137,6 +142,33 @@ private fun MonthlyCostText() {
 private fun MonthlyCostTextPreview() {
     LessonsCalendarTheme {
         MonthlyCostText()
+    }
+}
+
+@Composable
+fun MonthlyCostInputField() {
+    var inputValue by remember { mutableStateOf("") }
+
+    TextField(
+        value = inputValue,
+        onValueChange = { newValue ->
+            if (newValue.all { it.isDigit() || it == '.' }) {
+                inputValue = newValue
+            }
+        },
+        keyboardOptions = KeyboardOptions.Default.copy(
+            keyboardType = KeyboardType.Number
+        ),
+        modifier = Modifier.fillMaxWidth(),
+        label = { Text("10,000") }
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MonthlyCostInputFieldPreview() {
+    LessonsCalendarTheme {
+        MonthlyCostInputField()
     }
 }
 
