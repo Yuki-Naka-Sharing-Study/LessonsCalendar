@@ -44,6 +44,16 @@ fun ConfirmScreen() {
             WhatToLearnText()
             WhatToLearnUserEnteredText()
             SinceStartText()
+            DayNumberText()
+            DayText()
+            WeekNumberText()
+            WeekText()
+            MonthNumberText()
+            MonthText()
+            YearNumberText()
+            YearText()
+            YenNumberText()
+            YenText()
         }
     }
 }
