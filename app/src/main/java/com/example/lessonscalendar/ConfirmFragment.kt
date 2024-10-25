@@ -190,3 +190,18 @@ private fun MonthTextPreview() {
         MonthText()
     }
 }
+
+@Composable
+private fun YearNumberText() {
+    Text(
+        text = "4"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun YearNumberTextPreview() {
+    LessonsCalendarTheme {
+        YearNumberText()
+    }
+}
