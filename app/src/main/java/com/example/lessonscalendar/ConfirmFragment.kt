@@ -220,3 +220,18 @@ private fun YearTextPreview() {
         YearText()
     }
 }
+
+@Composable
+private fun YenNumberText() {
+    Text(
+        text = "10,0000"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun YenNumberTextPreview() {
+    LessonsCalendarTheme {
+        YenNumberText()
+    }
+}
