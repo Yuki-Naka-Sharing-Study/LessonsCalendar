@@ -235,3 +235,18 @@ private fun YenNumberTextPreview() {
         YenNumberText()
     }
 }
+
+@Composable
+private fun YenText() {
+    Text(
+        text = "円"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun YenTextPreview() {
+    LessonsCalendarTheme {
+        YenText()
+    }
+}
