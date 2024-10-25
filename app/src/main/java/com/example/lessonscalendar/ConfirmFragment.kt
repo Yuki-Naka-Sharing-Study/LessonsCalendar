@@ -160,3 +160,18 @@ private fun WeekTextPreview() {
         WeekText()
     }
 }
+
+@Composable
+private fun MonthNumberText() {
+    Text(
+        text = "3"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MonthNumberTextPreview() {
+    LessonsCalendarTheme {
+        MonthNumberText()
+    }
+}
