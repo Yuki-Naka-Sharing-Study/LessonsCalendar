@@ -69,3 +69,18 @@ fun WhatToLearnUserEnteredTextPreview() {
         WhatToLearnUserEnteredText()
     }
 }
+
+@Composable
+fun SinceStartText() {
+    Text(
+        text = "習い事を開始し始めてから"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun SinceStartTextPreview() {
+    LessonsCalendarTheme {
+        SinceStartText()
+    }
+}
