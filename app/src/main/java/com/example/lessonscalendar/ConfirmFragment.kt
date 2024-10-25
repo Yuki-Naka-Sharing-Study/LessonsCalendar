@@ -39,3 +39,18 @@ fun ConfirmScreenPreview() {
         ConfirmScreen()
     }
 }
+
+@Composable
+fun WhatToLearnText() {
+    Text(
+        text = "開始し始めた習い事"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun WhatToLearnTextPreview() {
+    LessonsCalendarTheme {
+        WhatToLearnText()
+    }
+}
