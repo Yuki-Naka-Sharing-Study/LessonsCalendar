@@ -40,3 +40,18 @@ fun StartScreenPreview() {
         StartScreen()
     }
 }
+
+@Composable
+private fun WhatToLearnText() {
+    Text(
+        text = "開始する習い事"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WhatToLearnTextPreview() {
+    LessonsCalendarTheme {
+        WhatToLearnText()
+    }
+}
