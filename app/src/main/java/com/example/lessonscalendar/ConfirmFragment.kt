@@ -26,7 +26,7 @@ class ConfirmFragment : Fragment() {
 }
 
 @Composable
-private fun ConfirmScreen() {
+fun ConfirmScreen() {
     Text(
         text = "習い事の記録確認用画面"
     )
