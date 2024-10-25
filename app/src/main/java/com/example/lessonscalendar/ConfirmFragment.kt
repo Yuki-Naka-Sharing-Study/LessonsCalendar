@@ -205,3 +205,18 @@ private fun YearNumberTextPreview() {
         YearNumberText()
     }
 }
+
+@Composable
+private fun YearText() {
+    Text(
+        text = "年経過"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun YearTextPreview() {
+    LessonsCalendarTheme {
+        YearText()
+    }
+}
