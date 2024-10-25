@@ -6,8 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.tooling.preview.Preview
 
@@ -54,6 +60,25 @@ private fun WhatToLearnText() {
 private fun WhatToLearnTextPreview() {
     LessonsCalendarTheme {
         WhatToLearnText()
+    }
+}
+
+@Composable
+private fun WhatToLearnTextField() {
+    var text by remember { mutableStateOf("") }
+
+    OutlinedTextField(
+        value = text,
+        onValueChange = { text = it },
+        placeholder = { Text("ピアノ") }
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WhatToLearnTextFieldPreview() {
+    LessonsCalendarTheme {
+        WhatToLearnTextField()
     }
 }
 
