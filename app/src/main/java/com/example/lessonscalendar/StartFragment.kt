@@ -166,7 +166,7 @@ private fun MonthlyCostTextPreview() {
 }
 
 @Composable
-fun MonthlyCostInputField() {
+private fun MonthlyCostInputField() {
     var inputValue by remember { mutableStateOf("") }
 
     TextField(
