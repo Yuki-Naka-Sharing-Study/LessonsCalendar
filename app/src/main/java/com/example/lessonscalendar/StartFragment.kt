@@ -173,6 +173,21 @@ private fun MonthlyCostInputFieldPreview() {
 }
 
 @Composable
+private fun YenText() {
+    Text(
+        text = "円"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun YenTextPreview() {
+    LessonsCalendarTheme {
+        YenText()
+    }
+}
+
+@Composable
 private fun StartButton() {
     Button(onClick = { /*TODO*/ },) {
         Text(text = "習い事を開始")
