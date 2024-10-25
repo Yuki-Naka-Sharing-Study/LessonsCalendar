@@ -100,3 +100,18 @@ private fun SinceStartTextPreview() {
         SinceStartText()
     }
 }
+
+@Composable
+private fun DayNumberText() {
+    Text(
+        text = "1"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DayNumberTextPreview() {
+    LessonsCalendarTheme {
+        DayNumberText()
+    }
+}
