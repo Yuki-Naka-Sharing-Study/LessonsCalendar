@@ -34,9 +34,6 @@ class ConfirmFragment : Fragment() {
 
 @Composable
 fun ConfirmScreen() {
-    Text(
-        text = "習い事の記録確認用画面"
-    )
     Row {
         Column(
             modifier = Modifier
@@ -45,6 +42,8 @@ fun ConfirmScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             WhatToLearnText()
+            WhatToLearnUserEnteredText()
+            SinceStartText()
         }
     }
 }
