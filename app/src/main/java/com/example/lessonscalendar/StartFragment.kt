@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.ComposeView
@@ -83,5 +84,20 @@ private fun MonthlyCostText() {
 private fun MonthlyCostTextPreview() {
     LessonsCalendarTheme {
         MonthlyCostText()
+    }
+}
+
+@Composable
+private fun StartButton() {
+    Button(onClick = { /*TODO*/ },) {
+        Text(text = "習い事を開始")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun StartButtonPreview() {
+    LessonsCalendarTheme {
+        StartButton()
     }
 }
