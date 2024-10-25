@@ -55,3 +55,18 @@ private fun WhatToLearnTextPreview() {
         WhatToLearnText()
     }
 }
+
+@Composable
+private fun WhenToLearnText() {
+    Text(
+        text = "いつから開始？"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WhenToLearnTextPreview() {
+    LessonsCalendarTheme {
+        WhenToLearnText()
+    }
+}
