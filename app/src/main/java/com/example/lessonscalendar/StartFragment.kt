@@ -70,3 +70,18 @@ private fun WhenToLearnTextPreview() {
         WhenToLearnText()
     }
 }
+
+@Composable
+private fun MonthlyCostText() {
+    Text(
+        text = "習い事の月額費用"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MonthlyCostTextPreview() {
+    LessonsCalendarTheme {
+        MonthlyCostText()
+    }
+}
