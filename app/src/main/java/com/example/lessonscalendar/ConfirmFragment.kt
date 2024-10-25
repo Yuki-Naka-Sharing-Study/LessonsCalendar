@@ -115,3 +115,18 @@ private fun DayNumberTextPreview() {
         DayNumberText()
     }
 }
+
+@Composable
+private fun DayText() {
+    Text(
+        text = "日経過"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DayTextPreview() {
+    LessonsCalendarTheme {
+        DayText()
+    }
+}
