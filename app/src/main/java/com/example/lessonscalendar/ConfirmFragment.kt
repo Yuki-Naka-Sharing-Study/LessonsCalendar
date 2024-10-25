@@ -26,7 +26,7 @@ class ConfirmFragment : Fragment() {
 }
 
 @Composable
-fun ConfirmScreen() {
+private fun ConfirmScreen() {
     Text(
         text = "習い事の記録確認用画面"
     )
@@ -34,14 +34,14 @@ fun ConfirmScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun ConfirmScreenPreview() {
+private fun ConfirmScreenPreview() {
     LessonsCalendarTheme {
         ConfirmScreen()
     }
 }
 
 @Composable
-fun WhatToLearnText() {
+private fun WhatToLearnText() {
     Text(
         text = "開始し始めた習い事"
     )
@@ -49,14 +49,14 @@ fun WhatToLearnText() {
 
 @Preview(showBackground = true)
 @Composable
-fun WhatToLearnTextPreview() {
+private fun WhatToLearnTextPreview() {
     LessonsCalendarTheme {
         WhatToLearnText()
     }
 }
 
 @Composable
-fun WhatToLearnUserEnteredText() {
+private fun WhatToLearnUserEnteredText() {
     Text(
         text = "ピアノ"
     )
@@ -64,14 +64,14 @@ fun WhatToLearnUserEnteredText() {
 
 @Preview(showBackground = true)
 @Composable
-fun WhatToLearnUserEnteredTextPreview() {
+private fun WhatToLearnUserEnteredTextPreview() {
     LessonsCalendarTheme {
         WhatToLearnUserEnteredText()
     }
 }
 
 @Composable
-fun SinceStartText() {
+private fun SinceStartText() {
     Text(
         text = "習い事を開始し始めてから"
     )
@@ -79,7 +79,7 @@ fun SinceStartText() {
 
 @Preview(showBackground = true)
 @Composable
-fun SinceStartTextPreview() {
+private fun SinceStartTextPreview() {
     LessonsCalendarTheme {
         SinceStartText()
     }
