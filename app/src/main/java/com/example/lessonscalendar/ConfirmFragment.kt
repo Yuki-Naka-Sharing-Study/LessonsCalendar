@@ -145,3 +145,18 @@ private fun WeekNumberTextPreview() {
         WeekNumberText()
     }
 }
+
+@Composable
+private fun WeekText() {
+    Text(
+        text = "週間経過"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WeekTextPreview() {
+    LessonsCalendarTheme {
+        WeekText()
+    }
+}
