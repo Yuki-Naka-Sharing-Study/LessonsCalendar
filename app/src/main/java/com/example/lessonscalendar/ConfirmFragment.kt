@@ -130,3 +130,18 @@ private fun DayTextPreview() {
         DayText()
     }
 }
+
+@Composable
+private fun WeekNumberText() {
+    Text(
+        text = "2"
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun WeekNumberTextPreview() {
+    LessonsCalendarTheme {
+        WeekNumberText()
+    }
+}
