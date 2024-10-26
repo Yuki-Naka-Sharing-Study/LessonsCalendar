@@ -9,7 +9,8 @@ import android.view.ViewGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
@@ -47,22 +48,41 @@ class StartFragment : Fragment() {
 
 @Composable
 fun StartScreen() {
-    Row {
+    Column(
+        modifier = Modifier
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+        Spacer(modifier = Modifier.height(16.dp))
+        WhatToLearnText()
+        Spacer(modifier = Modifier.height(8.dp))
+        WhatToLearnTextField()
+
+        Spacer(modifier = Modifier.height(96.dp))
+        WhenToLearnText()
+        Spacer(modifier = Modifier.height(8.dp))
+        WhenToLearnPicker()
+
+        Spacer(modifier = Modifier.height(96.dp))
+        MonthlyCostText()
+        Spacer(modifier = Modifier.height(8.dp))
+
         Column(
-            modifier = Modifier
-                .padding(16.dp),
-            verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
-            WhatToLearnText()
-            WhatToLearnTextField()
-            WhenToLearnText()
-            WhenToLearnPicker()
-            MonthlyCostText()
-            MonthlyCostInputField()
-            YenText()
-            StartButton()
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                MonthlyCostInputField()
+                YenText()
+            }
         }
+
+        Spacer(modifier = Modifier.height(96.dp))
+        StartButton()
     }
 }
 
@@ -129,14 +149,12 @@ private fun WhenToLearnPicker() {
     var selectedDate by remember { mutableStateOf("") }
 
     Button(onClick = {
-        // 日付選択ダイアログを表示
         DatePickerDialog(context, { _, year, month, day ->
             selectedDate = "2024年10月25日"
         }, 2024, 10, 25).show()
     }) {
         Text("日付を選択")
     }
-
     if (selectedDate.isNotEmpty()) {
         Text(text = "選択された日付: $selectedDate")
     }
@@ -179,7 +197,6 @@ private fun MonthlyCostInputField() {
         keyboardOptions = KeyboardOptions.Default.copy(
             keyboardType = KeyboardType.Number
         ),
-        modifier = Modifier.fillMaxWidth(),
         label = { Text("10,000") }
     )
 }
@@ -209,7 +226,7 @@ private fun YenTextPreview() {
 
 @Composable
 private fun StartButton() {
-    Button(onClick = { /*TODO*/ },) {
+    Button(onClick = { /*TODO*/ }) {
         Text(text = "習い事を開始")
     }
 }
