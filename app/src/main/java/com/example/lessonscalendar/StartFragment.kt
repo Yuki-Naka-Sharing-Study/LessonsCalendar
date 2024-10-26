@@ -66,20 +66,14 @@ fun StartScreen() {
 
         Spacer(modifier = Modifier.height(96.dp))
         MonthlyCostText()
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center,
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
-            ) {
-                MonthlyCostInputField()
-                YenText()
-            }
+            MonthlyCostInputField()
+            YenText()
         }
+        Spacer(modifier = Modifier.height(8.dp))
 
         Spacer(modifier = Modifier.height(96.dp))
         StartButton()
