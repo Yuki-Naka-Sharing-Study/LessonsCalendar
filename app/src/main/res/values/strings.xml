@@ -2,4 +2,19 @@
     <string name="app_name">LessonsCalendar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- ConfirmFragment -->
+    <string name="what_to_learn">開始し始めた習い事</string>
+    <string name="what_to_learn_user_entered">ピアノ</string>
+    <string name="since_start">習い事を開始し始めてから</string>
+    <string name="day_number">1</string>
+    <string name="day">日経過</string>
+    <string name="week_number">2</string>
+    <string name="week">週間経過</string>
+    <string name="month_number">3</string>
+    <string name="month">ヶ月経過</string>
+    <string name="year_number">4</string>
+    <string name="year">年経過</string>
+    <string name="yen_number">10,0000</string>
+    <string name="yen">円</string>
 </resources>

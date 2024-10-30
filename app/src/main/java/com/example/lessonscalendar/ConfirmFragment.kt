@@ -11,12 +11,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.lessonscalendar.ui.theme.LessonsCalendarTheme
@@ -115,7 +115,7 @@ private fun ConfirmScreenPreview() {
 @Composable
 private fun WhatToLearnText() {
     Text(
-        text = "開始し始めた習い事"
+        text = stringResource(id = R.string.what_to_learn)
     )
 }
 
@@ -130,7 +130,7 @@ private fun WhatToLearnTextPreview() {
 @Composable
 private fun WhatToLearnUserEnteredText() {
     Text(
-        text = "ピアノ"
+        text = stringResource(id = R.string.what_to_learn_user_entered)
     )
 }
 
@@ -145,7 +145,7 @@ private fun WhatToLearnUserEnteredTextPreview() {
 @Composable
 private fun SinceStartText() {
     Text(
-        text = "習い事を開始し始めてから"
+        text = stringResource(id = R.string.since_start)
     )
 }
 
@@ -160,7 +160,7 @@ private fun SinceStartTextPreview() {
 @Composable
 private fun DayNumberText() {
     Text(
-        text = "1"
+        text = stringResource(id = R.string.day_number)
     )
 }
 
@@ -175,7 +175,7 @@ private fun DayNumberTextPreview() {
 @Composable
 private fun DayText() {
     Text(
-        text = "日経過"
+        text = stringResource(id = R.string.day)
     )
 }
 
@@ -190,7 +190,7 @@ private fun DayTextPreview() {
 @Composable
 private fun WeekNumberText() {
     Text(
-        text = "2"
+        text = stringResource(id = R.string.week_number)
     )
 }
 
@@ -205,7 +205,7 @@ private fun WeekNumberTextPreview() {
 @Composable
 private fun WeekText() {
     Text(
-        text = "週間経過"
+        text = stringResource(id = R.string.week)
     )
 }
 
@@ -220,7 +220,7 @@ private fun WeekTextPreview() {
 @Composable
 private fun MonthNumberText() {
     Text(
-        text = "3"
+        text = stringResource(id = R.string.month_number)
     )
 }
 
@@ -235,7 +235,7 @@ private fun MonthNumberTextPreview() {
 @Composable
 private fun MonthText() {
     Text(
-        text = "ヶ月経過"
+        text = stringResource(id = R.string.month)
     )
 }
 
@@ -250,7 +250,7 @@ private fun MonthTextPreview() {
 @Composable
 private fun YearNumberText() {
     Text(
-        text = "4"
+        text = stringResource(id = R.string.year_number)
     )
 }
 
@@ -265,7 +265,7 @@ private fun YearNumberTextPreview() {
 @Composable
 private fun YearText() {
     Text(
-        text = "年経過"
+        text = stringResource(id = R.string.year)
     )
 }
 
@@ -280,7 +280,7 @@ private fun YearTextPreview() {
 @Composable
 private fun YenNumberText() {
     Text(
-        text = "10,0000"
+        text = stringResource(id = R.string.yen_number)
     )
 }
 
@@ -295,7 +295,7 @@ private fun YenNumberTextPreview() {
 @Composable
 private fun YenText() {
     Text(
-        text = "円"
+        text = stringResource(id = R.string.yen)
     )
 }
 
