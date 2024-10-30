@@ -17,4 +17,10 @@
     <string name="year">年経過</string>
     <string name="yen_number">10,0000</string>
     <string name="yen">円</string>
+
+    <!-- StartFragment -->
+    <string name="when_to_learn">いつから開始</string>
+    <string name="select_date">日付を選択</string>
+    <string name="monthly_cost">習い事の月額費用</string>
+    <string name="start_lesson">習い事を開始</string>
 </resources>

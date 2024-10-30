@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -91,7 +92,7 @@ fun StartScreenPreview() {
 @Composable
 private fun WhatToLearnText() {
     Text(
-        text = "開始する習い事"
+        text = stringResource(id = R.string.what_to_learn)
     )
 }
 
@@ -110,7 +111,14 @@ private fun WhatToLearnTextField() {
     OutlinedTextField(
         value = text,
         onValueChange = { text = it },
-        placeholder = { Text("ピアノ") }
+        placeholder = {
+            Text(
+                text = stringResource
+                    (
+                    id = R.string.what_to_learn_user_entered
+                )
+            )
+        }
     )
 }
 
@@ -125,7 +133,7 @@ private fun WhatToLearnTextFieldPreview() {
 @Composable
 private fun WhenToLearnText() {
     Text(
-        text = "いつから開始？"
+        text = stringResource(id = R.string.when_to_learn)
     )
 }
 
@@ -147,7 +155,7 @@ private fun WhenToLearnPicker() {
             selectedDate = "2024年10月25日"
         }, 2024, 10, 25).show()
     }) {
-        Text("日付を選択")
+        Text(text = stringResource(id = R.string.select_date))
     }
     if (selectedDate.isNotEmpty()) {
         Text(text = "選択された日付: $selectedDate")
@@ -165,7 +173,7 @@ private fun WhenToLearnPickerPreview() {
 @Composable
 private fun MonthlyCostText() {
     Text(
-        text = "習い事の月額費用"
+        text = stringResource(id = R.string.monthly_cost)
     )
 }
 
@@ -191,7 +199,11 @@ private fun MonthlyCostInputField() {
         keyboardOptions = KeyboardOptions.Default.copy(
             keyboardType = KeyboardType.Number
         ),
-        label = { Text("10,000") }
+        label = {
+            Text(
+                text = stringResource(id = R.string.yen_number)
+            )
+        }
     )
 }
 
@@ -206,7 +218,7 @@ private fun MonthlyCostInputFieldPreview() {
 @Composable
 private fun YenText() {
     Text(
-        text = "円"
+        text = stringResource(id = R.string.yen)
     )
 }
 
@@ -221,7 +233,7 @@ private fun YenTextPreview() {
 @Composable
 private fun StartButton() {
     Button(onClick = { /*TODO*/ }) {
-        Text(text = "習い事を開始")
+        Text(text = stringResource(id = R.string.start_lesson))
     }
 }
 
