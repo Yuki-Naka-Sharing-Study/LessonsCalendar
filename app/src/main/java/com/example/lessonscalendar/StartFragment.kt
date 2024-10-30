@@ -113,8 +113,7 @@ private fun WhatToLearnTextField() {
         onValueChange = { text = it },
         placeholder = {
             Text(
-                text = stringResource
-                    (
+                text = stringResource(
                     id = R.string.what_to_learn_user_entered
                 )
             )
