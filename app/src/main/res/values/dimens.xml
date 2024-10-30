@@ -4,4 +4,5 @@
     <dimen name="space_16">16dp</dimen>
     <dimen name="space_24">24dp</dimen>
     <dimen name="space_32">32dp</dimen>
+    <dimen name="space_96">96dp</dimen>
 </resources>

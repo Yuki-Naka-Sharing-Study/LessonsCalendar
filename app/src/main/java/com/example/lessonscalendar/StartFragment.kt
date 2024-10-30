@@ -26,10 +26,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 
 import com.example.lessonscalendar.ui.theme.LessonsCalendarTheme
 
@@ -51,21 +51,55 @@ class StartFragment : Fragment() {
 fun StartScreen() {
     Column(
         modifier = Modifier
-            .padding(16.dp),
+            .padding(
+                dimensionResource(
+                    id = R.dimen.space_16
+                )
+            ),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_16
+                )
+            )
+        )
         WhatToLearnText()
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_8
+                )
+            )
+        )
         WhatToLearnTextField()
 
-        Spacer(modifier = Modifier.height(96.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_96
+                )
+            )
+        )
         WhenToLearnText()
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_8
+                )
+            )
+        )
         WhenToLearnPicker()
 
-        Spacer(modifier = Modifier.height(96.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_96
+                )
+            )
+        )
         MonthlyCostText()
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -74,9 +108,21 @@ fun StartScreen() {
             MonthlyCostInputField()
             YenText()
         }
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_8
+                )
+            )
+        )
 
-        Spacer(modifier = Modifier.height(96.dp))
+        Spacer(
+            modifier = Modifier.height(
+                dimensionResource(
+                    id = R.dimen.space_96
+                )
+            )
+        )
         StartButton()
     }
 }
